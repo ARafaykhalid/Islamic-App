@@ -1,4 +1,4 @@
-# AI Powered Islamic Application
+# 🤖 AI Powered Islamic Application
 
 This is a WinUI 3 application built with C++/WinRT that serves as an educational platform for exploring Islamic teachings. The app features an AI-powered chatbot utilizing the Gemini API, allowing users to ask questions and receive insightful responses.
 
