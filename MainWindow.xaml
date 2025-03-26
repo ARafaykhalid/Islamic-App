@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Islamiyat.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Islamiyat"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Islamiyat">
+
+    <Grid>
+        <Grid>
+
+            <Rectangle x:Name="BG1" Visibility="Collapsed" Width="Auto" Height="Auto">
+                <Rectangle.Fill>
+                    <ImageBrush 
+                        ImageSource="Images/1.png"
+                        Stretch="UniformToFill">
+                    </ImageBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+
+            <Rectangle x:Name="BG2" Visibility="Collapsed" Width="Auto" Height="Auto">
+                <Rectangle.Fill>
+                    <ImageBrush 
+                        ImageSource="Images/3.png"
+                        Stretch="UniformToFill">
+                    </ImageBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle x:Name="BG3" Visibility="Collapsed" Width="Auto" Height="Auto">
+                <Rectangle.Fill>
+                    <ImageBrush 
+                        ImageSource="Images/4.png"
+                        Stretch="UniformToFill">
+                    </ImageBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle x:Name="BG4" Visibility="Collapsed" Width="Auto" Height="Auto">
+                <Rectangle.Fill>
+                    <ImageBrush 
+                        ImageSource="Images/5.png"
+                        Stretch="UniformToFill">
+                    </ImageBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle x:Name="BG5" Visibility="Collapsed" Width="auto" Height="Auto">
+                <Rectangle.Fill>
+                    <ImageBrush 
+                        ImageSource="Images/BG2.jpg"
+                        Stretch="UniformToFill">
+                    </ImageBrush>
+
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border 
+                Width="Auto" 
+                Height="Auto" 
+                Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                BorderBrush="Gray">
+            </Border>
+
+        </Grid>
+
+
+        <NavigationView 
+            x:Name="MainMenu"
+            IsSettingsVisible="False"
+            PaneDisplayMode="LeftCompact"
+            Background="Transparent"
+            IsBackButtonVisible="Collapsed"
+            PaneTitle="Islamiyat Project Topics:"
+            SelectionChanged="MainMenu_SelectionChanged">
+
+            <NavigationView.MenuItems>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItem Content="Introduction" Tag="InfoPage" Icon="Contact"/>
+                <NavigationViewItem Content="Sharia Law" Tag="ShariaPage" Icon="Flag"/>
+                <NavigationViewItem Content="Islamic Jurisprudence [FIQH]" Tag="FiqhPage" Icon="Library"/>
+                <NavigationViewItem Content="5 Pillars Of Islam" Tag="PillarsPage" Icon="Globe"/>
+                <NavigationViewItem Content="Political Islam" Tag="PoliticalIslamPage" Icon="World"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItem Content="Ask [Abdul Bari] For Questions" Tag="AbdulBariPage" Icon="Help"/>
+
+
+
+            </NavigationView.MenuItems>
+
+            <NavigationView.AutoSuggestBox>
+                <AutoSuggestBox HorizontalAlignment="Left" Width="280" PlaceholderText="Search Bar" QueryIcon="Find" AutomationProperties.Name="Search" />
+            </NavigationView.AutoSuggestBox>
+
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border 
+                    Width="Auto" 
+                    Height="Auto" 
+                    Margin="20"
+                    CornerRadius="25"
+                    BorderBrush="Gray"
+                    BorderThickness="2.5"
+                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                    Opacity=".8">
+                </Border>
+
+
+                <Border
+                    x:Name="InfoPage"
+                    Visibility="Visible"
+                    Margin="23"
+                    CornerRadius="25">
+
+                    <ListView 
+                        Background="Transparent" 
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                        SelectionMode="None">
+
+                        <StackPanel>
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="48"
+                                FontWeight="ExtraBlack"
+                                Margin="0,50,0,0"
+                                HorizontalAlignment="Center"
+                                Text="Introduction">
+
+                            </TextBlock>
+                            <Border Width="400" VerticalAlignment="Top" BorderThickness="0,5,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="22"
+                                FontWeight="Normal"
+                                Margin="0,50,0,25"
+                                HorizontalAlignment="Left"
+                                Text="The Islamiyat Project is a comprehensive educational resource designed to provide insightful knowledge about key Islamic teachings, laws, and principles. This application serves as a structured guide covering fundamental topics such as Shariah Law, Islamic Jurisprudence (Fiqh), the Five Pillars of Islam, and Political Islam.&#x0a;Through well-organized sections, the app explains core Islamic beliefs, including the six Articles of Faith, essential rulings on permissible (Halal) and forbidden (Haram) actions, and the role of Shariah in daily life. It also explores how Islamic governance and leadership have shaped societies historically and in the modern era.&#x0a;&#x0a;Key Features:&#x0a;✅ Shariah Law – Understanding divine laws and their applications.&#x0a;✅ Fiqh (Islamic Jurisprudence) – Exploring the sources and methods of Islamic rulings.&#x0a;✅ The Five Pillars of Islam – Shahada, Salah, Zakat, Sawm, and Hajj.&#x0a;✅ Political Islam – The relationship between Islam and governance.&#x0a;&#x0a;The Islamiyat Project is a valuable tool for students, researchers, and anyone interested in learning about the spiritual, ethical, and legal aspects of Islam. Whether you seek historical context, religious understanding, or contemporary discussions, this app provides an engaging and informative experience.&#x0a;&#x0a;🌙 'Explore the depth of Islamic teachings and their relevance in today’s world.'">
+                            </TextBlock>
+
+                        </StackPanel>
+
+                        <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                        <TextBlock 
+                            FontFamily="Rubik"
+                            TextWrapping="Wrap"
+                            FontSize="48"
+                            FontWeight="ExtraBlack"
+                            Margin="0,50,0,0"
+                            HorizontalAlignment="Center"
+                            Text="Meet Our Developer">
+                        </TextBlock>
+
+                        <Border Width="400" VerticalAlignment="Top" BorderThickness="0,4,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                        <Grid
+                            Margin="25,0,25,25"
+                            ToolTipService.ToolTip="24BSSW038">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="400"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="500"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel
+                                Grid.Column="0"
+                                Margin="0,0,25,0">
+                                <TextBlock 
+            
+                                    FontFamily="Rubik"
+                                    TextWrapping="Wrap"
+                                    FontSize="54"
+                                    FontWeight="ExtraBlack"
+                                    Margin="0,50,0,0"
+                                    TextAlignment="Left"
+                                    Text="Abdul Rafay Khalid">
+
+                                </TextBlock>
+
+
+                                <Border Width="400" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="0,4,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                                <TextBlock 
+                                    FontFamily="Rubik"
+                                    TextWrapping="Wrap"
+                                    FontSize="24"
+                                    Margin="0,25,0,0"
+                                    FontWeight="Normal"
+                                    HorizontalAlignment="Left"
+                                    Text="The Islamiyat Project App was skillfully developed by Abdul Rafay Khalid, who brought the vision of this educational platform to life. With expertise in software development and UI/UX design, he has created an intuitive and interactive application that enhances the learning experience. His dedication to ensuring a smooth user interface, seamless navigation, and well-integrated features has made this app a valuable resource for students and researchers alike. His technical skills and hard work have been instrumental in transforming this project from an idea into a fully functional digital platform.">
+                                </TextBlock>
+
+
+
+                            </StackPanel>
+
+                            <Border
+                                Grid.Column="1"
+                                CornerRadius="25"
+                                BorderBrush="Gray"
+                                Margin="50,25,0,25"
+                                BorderThickness="2"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right">
+                                <Image 
+                                    Source="Images/me.png"
+                                    Width="600"
+                                    Height="400"
+                                    Margin="-30,0,0,0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+
+                                </Image>
+                            </Border>
+
+
+                        </Grid>
+
+                        <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                        <TextBlock 
+                            FontFamily="Rubik"
+                            TextWrapping="Wrap"
+                            FontSize="48"
+                            FontWeight="ExtraBlack"
+                            Margin="0,50,0,0"
+                            HorizontalAlignment="Center"
+                            Text="Content Arranged By:">
+                        </TextBlock>
+
+                        <Border Width="400" VerticalAlignment="Top" BorderThickness="0,4,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+
+
+                        <Grid
+                                Margin="0,0,0,50">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border 
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW94">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Shahmeer">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="5"
+                                    Grid.Column="2"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW74">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Syed Naqi">
+
+                                </TextBlock>
+                            </Border>
+
+                            <Border 
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW16">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Abdul Wahab">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW14">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Sharjeel">
+
+                                </TextBlock>
+                            </Border>
+
+                            <Border 
+                                    Grid.Row="0"
+                                    Grid.Column="3"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW066">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Sameer">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="4"
+                                    Grid.Column="0"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW042">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Arqam">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="4"
+                                    Grid.Column="2"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW102">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Ayan">
+
+                                </TextBlock>
+                            </Border>
+
+                            <Border 
+                                    Grid.Row="0"
+                                    Grid.Column="5"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW050">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Hammad">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="4"
+                                    Grid.Column="4"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW056">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Haseeb">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW034">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Ashir">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW068">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Yousuf">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="1"
+                                    Grid.Column="2"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW044">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Aziz">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="1"
+                                    Grid.Column="3"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW062">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Moneeb">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="1"
+                                    Grid.Column="4"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW106">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Ramish">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW060">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Muheeb">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW076">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Taha">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW006">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Soha">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="2"
+                                    Grid.Column="2"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW020">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Alishba">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="2"
+                                    Grid.Column="3"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW084">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Hiba">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="2"
+                                    Grid.Column="4"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW058">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Bisma">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="4"
+                                    Grid.Column="3"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW010">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Mubashir">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="3"
+                                    Grid.Column="0"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW048">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Syed Saad ali">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW008">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Wareesha">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="3"
+                                    Grid.Column="2"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW028">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Hafsa">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="3"
+                                    Grid.Column="3"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW104">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Noor fatima">
+
+                                </TextBlock>
+                            </Border>
+                            <Border 
+                                    Grid.Row="3"
+                                    Grid.Column="4"
+                                    Width="Auto" 
+                                    Height="Auto"
+                                    Margin="20"
+                                    CornerRadius="15"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2"
+                                    Background="{ThemeResource AcrylicInAppFillColorBaseBrush}"
+                                    ToolTipService.ToolTip="24BSSW088">
+
+                                <TextBlock
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        Text="Arshiya">
+
+                                </TextBlock>
+                            </Border>
+
+
+                        </Grid>
+
+                    </ListView>
+
+                </Border>
+
+                <Border
+                    x:Name="FIQHPage"
+                    Visibility="Collapsed"
+                    Margin="23"
+                    CornerRadius="25">
+                    <ListView 
+                        Background="Transparent" 
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                        SelectionMode="None">
+
+                        <StackPanel>
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="48"
+                                FontWeight="ExtraBlack"
+                                Margin="0,50,0,0"
+                                HorizontalAlignment="Center"
+                                Text="Islamic Jurisprudence [FIQH]">
+
+                            </TextBlock>
+                            <Border Width="700" VerticalAlignment="Top" BorderThickness="0,5,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="22"
+                                FontWeight="Normal"
+                                Margin="0,50,0,25"
+                                HorizontalAlignment="Left"
+                                Text="Islamic jurisprudence may be defined as a process by means of which jurists derive sets guidelines, rules and regulations (the Shari’ah) from the principles of the Qur’an and the Sunnah. Over the centuries, these have been formulated and elaborated upon by successive generations of learned jurists, through interpretation, analogy, consensus and disciplined research. While the principles of the Qur’an and the Sunnah are permanent, it is the nature of Islamic jurisprudence to facilitate for human beings the application of those principles to their activities and dealings.">
+                            </TextBlock>
+
+
+                            <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <Expander 
+                                Margin="25,25,25,0"
+                                Background="#1A00FFAA"
+                                Foreground="White"
+                                CornerRadius="8"
+                                HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        Text="What does the Quran say about Jurisprudence?">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="18"
+                                        FontWeight="Normal"
+                                        HorizontalAlignment="Left"
+                                        Text="The term jurisprudence generally means 'to understand' or 'to study', so verse 122 of Surah al-Taubah is talking about studying all aspects of religion, i.e. Islam, including but not limited to Islamic law. do not have. Jurisprudence as used in verse 122 of Surah Al-Taubah means the study of the faith presented by the Qur'an, the true historical events contained in it, various natural events in it, the law, the Prophet's life, the guidance of the development by Allah, how did to establish a new religion for the first generation of Muslims and to ensure its eternity, how Islamic teachings relate to time and space, how to present Islam to different peoples and cultures.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+                            <Expander 
+                                 Margin="25,0,25,0"
+                                 Background="#1A00FFAA"
+                                 Foreground="White"
+                                 CornerRadius="8"
+                                 HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="24"
+                                         FontWeight="Bold"
+                                         HorizontalAlignment="Center"
+                                         Text="What are the basic concepts of Islamic Jurisprudence?">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="18"
+                                         FontWeight="Normal"
+                                         HorizontalAlignment="Left"
+                                         Text="The basic principles of fiqh are protection of life, protection of wealth and property, preservation of honor, preservation of religion, promotion of good, and preservation of rights. These principles are derived from the Quran, Sunnah, and Hadith.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+
+                            <Expander 
+                                 Margin="25,0,25,25"
+                                 Background="#1A00FFAA"
+                                 Foreground="White"
+                                 CornerRadius="8"
+                                 HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="24"
+                                         FontWeight="Bold"
+                                         HorizontalAlignment="Center"
+                                         Text="What are the four sources of Islamic Jurisprudence?">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="18"
+                                         FontWeight="Normal"
+                                         HorizontalAlignment="Left"
+                                         Text="The primary sources of Islamic law are the Holy Book (The Quran), The Sunnah (the traditions or known practices of the Prophet Muhammad ), Ijma' (Consensus), and Qiyas (Analogy).">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+
+                            <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <Grid
+                                Margin="50">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="560"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock 
+                                    Grid.Row="0"
+                                    FontFamily="Rubik"
+                                    TextWrapping="Wrap"
+                                    FontSize="60"
+                                    FontStyle="Italic"
+                                    FontWeight="ExtraBlack"
+                                    TextAlignment="Center"
+                                    Text="Watch the Islamic Scholar Dr. Zakir Naik Refers to for Fiqh Issues!">
+
+                                </TextBlock>
+
+                                <Border
+                                    Grid.Row="1"
+                                    CornerRadius="25"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2">
+
+                                    <WebView2
+                                        x:Name="MyWebView2"
+                                        Source="https://www.youtube.com/embed/KoMuu2Cg9cE?si=CM5aVcgLrv3gDXrj"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalAlignment="Stretch">
+
+                                    </WebView2>
+                                </Border>
+
+                            </Grid>
+
+
+                        </StackPanel>
+
+
+                    </ListView>
+
+                </Border>
+
+                <Border
+                    x:Name="PillarsPage"
+                    Visibility="Collapsed"
+                    Margin="23"
+                    CornerRadius="25">
+                    <ListView 
+                        Background="Transparent" 
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                        SelectionMode="None">
+
+                        <StackPanel>
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="48"
+                                FontWeight="ExtraBlack"
+                                Margin="0,50,0,0"
+                                HorizontalAlignment="Center"
+                                Text="5 Pillars Of Islam">
+
+                            </TextBlock>
+                            <Border Width="500" VerticalAlignment="Top" BorderThickness="0,5,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="22"
+                                FontWeight="Normal"
+                                Margin="0,50,0,25"
+                                TextAlignment="Center"
+                                Text="The Five Pillars are the core beliefs and practices of Islam:">
+
+                            </TextBlock>
+
+
+                            <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <Expander 
+                                Margin="25,25,25,0"
+                                Background="#1A00FFAA"
+                                Foreground="White"
+                                CornerRadius="8"
+                                HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        Text="Profession of Faith (Shahada)">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="18"
+                                        FontWeight="Normal"
+                                        HorizontalAlignment="Left"
+                                        Text="The belief that 'There is no god but Allah, and Prophet Muhammad (PBUH) is the Messenger of God' is central to Islam. This phrase, written in Arabic, is often prominently featured in architecture and a range of objects, including the Qur'an, Islam's holy book of divine revelations. One becomes a Muslim by reciting this phrase with conviction.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+                            <Expander 
+                                 Margin="25,0,25,0"
+                                 Background="#1A00FFAA"
+                                 Foreground="White"
+                                 CornerRadius="8"
+                                 HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="24"
+                                         FontWeight="Bold"
+                                         HorizontalAlignment="Center"
+                                         Text="Prayer (Salat)">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="18"
+                                         FontWeight="Normal"
+                                         HorizontalAlignment="Left"
+                                         Text="Muslims pray facing Mecca five times a day: at dawn, noon, mid-afternoon, sunset, and after dark. Prayer includes a recitation of the opening chapter (sura) of the Qur'an, and is sometimes performed on a small rug or mat used expressly for this purpose . Muslims can pray individually at any location or together in a mosque, where a leader in prayer (imam) guides the congregation. Men gather in the mosque for the noonday prayer on Friday; women are welcome but not obliged to participate. After the prayer, a sermon focuses on a passage from the Qur'an, followed by prayers by the imam and a discussion of a particular religious topic.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+
+                            <Expander 
+                                 Margin="25,0,25,0"
+                                 Background="#1A00FFAA"
+                                 Foreground="White"
+                                 CornerRadius="8"
+                                 HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="24"
+                                         FontWeight="Bold"
+                                         HorizontalAlignment="Center"
+                                         Text="Alms (Zakat)">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="18"
+                                         FontWeight="Normal"
+                                         HorizontalAlignment="Left"
+                                         Text="In accordance with Islamic law, Muslims donate a fixed portion of their income to community members in need. Many rulers and wealthy Muslims build mosques, drinking fountains, hospitals, schools, and other institutions both as a religious duty and to secure the blessings associated with charity.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+
+                            <Expander 
+                                 Margin="25,0,25,0"
+                                 Background="#1A00FFAA"
+                                 Foreground="White"
+                                 CornerRadius="8"
+                                 HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="24"
+                                         FontWeight="Bold"
+                                         HorizontalAlignment="Center"
+                                         Text="Fasting (Sawm)">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="18"
+                                         FontWeight="Normal"
+                                         HorizontalAlignment="Left"
+                                         Text="During the daylight hours of Ramadan, the ninth month of the Islamic calendar, all healthy adult Muslims are required to abstain from food and drink. Through this temporary deprivation, they renew their awareness of and gratitude for everything God has provided in their lives—including the Qur'an, which was first revealed during this month. During Ramadan they share the hunger and thirst of the needy as a reminder of the religious duty to help those less fortunate.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+                            <Expander 
+                                 Margin="25,0,25,25"
+                                 Background="#1A00FFAA"
+                                 Foreground="White"
+                                 CornerRadius="8"
+                                 HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="24"
+                                         FontWeight="Bold"
+                                         HorizontalAlignment="Center"
+                                         Text="Pilgrimage (Hajj)">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="18"
+                                         FontWeight="Normal"
+                                         HorizontalAlignment="Left"
+                                         Text="- What is Hajj?&#x0a;&#x0a;Every year, millions of Muslims gather in Makkah to perform the religious pilgrimage. It is an obligation for every Muslim to perform Hajj once in their lifetime, if they are financially stable. It is a test of the Muslims patience, steadfastness, and level of spirituality. Hajj 2024 It starts on the 8th of Dhul Hijjah every year and lasts for 5 days. This year, Hajj will be between June 14th and June 18th, respectively, depending on the sighting of the moon. &#x0a;The Hajj journey is a sacred pilgrimage in Islam, undertaken by millions of Muslims worldwide. It's a once-in-a-lifetime obligation for those physically and financially able. &#x0a;&#x0a;The journey comprises several rituals, including: &#x0a;&#x0a;- Ihram: Wearing sacred garments &#x0a;- Tawaf: Circumambulating the Kaaba &#x0a;- Sa'i: Running between Safa and Marwa &#x0a;- Wuquf: Contemplation in Arafah &#x0a;- Stoning the Devil: Rejecting evil &#x0a;&#x0a;These rituals symbolize devotion, sacrifice, and unity among Muslims. The Hajj journey is a transformative experience, fostering spiritual growth and renewal.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+
+                            <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <Grid
+                                Margin="50">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="560"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock 
+                                    Grid.Row="0"
+                                    FontFamily="Rubik"
+                                    TextWrapping="Wrap"
+                                    FontSize="60"
+                                    FontStyle="Italic"
+                                    FontWeight="ExtraBlack"
+                                    TextAlignment="Center"
+                                    Text="Watch Dr. Israr Ahmed Explain the &#x0a;5 Pillars of Islam!">
+
+                                </TextBlock>
+
+                                <Border
+                                    Grid.Row="1"
+                                    CornerRadius="25"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2">
+
+                                    <WebView2
+                                        x:Name="MyWebView3"
+                                        Source="https://www.youtube.com/embed/faEJ0fItlwQ?si=FQhVxAkIFfZNeEjv"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalAlignment="Stretch">
+
+                                    </WebView2>
+                                </Border>
+
+                            </Grid>
+
+
+                        </StackPanel>
+
+
+                    </ListView>
+
+                </Border>
+
+
+                <Border
+                    x:Name="PoliticalIslamPage"
+                    Visibility="Collapsed"
+                    Margin="23"
+                    CornerRadius="25">
+                    <ListView 
+                        Background="Transparent" 
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                        SelectionMode="None">
+
+
+                        <StackPanel>
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="48"
+                                Margin="0,50,0,0"
+                                FontWeight="ExtraBlack"
+                                HorizontalAlignment="Center"
+                                Text="Political Islam">
+
+                            </TextBlock>
+                            <Border Width="400" VerticalAlignment="Top" BorderThickness="0,5,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="22"
+                                FontWeight="Normal"
+                                Margin="0,50,0,25"
+                                HorizontalAlignment="Left"
+                                Text="Political Islam is a complex and multifaceted concept that encompasses various ideologies, movements, and interpretations. At its core, it seeks to implement Islamic principles and laws in governance, emphasizing the importance of Sharia law, Islamic values, and the unity of Muslim communities.">
+                            </TextBlock>
+
+
+                            <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="30"
+                                FontWeight="Bold"
+                                Margin="-30,25,0,0"
+                                HorizontalAlignment="Center"
+                                Text="Key Principles:">
+
+                            </TextBlock>
+
+                            <Expander 
+                                Margin="25,25,25,0"
+                                Background="#1A00FFAA"
+                                Foreground="White"
+                                CornerRadius="8"
+                                HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        Text="Leadership">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="18"
+                                        FontWeight="Normal"
+                                        HorizontalAlignment="Left"
+                                        Text="Islamic leaders, such as Caliphs or Imams, are chosen based on their adherence to Islamic principles.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+                            <Expander 
+                                 Margin="25,0,25,0"
+                                 Background="#1A00FFAA"
+                                 Foreground="White"
+                                 CornerRadius="8"
+                                 HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="24"
+                                         FontWeight="Bold"
+                                         HorizontalAlignment="Center"
+                                         Text="Sharia Law">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="18"
+                                         FontWeight="Normal"
+                                         HorizontalAlignment="Left"
+                                        Text="The primary source of legislation, derived from the Quran and Hadith.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+
+                            <Expander 
+                                 Margin="25,0,25,0"
+                                 Background="#1A00FFAA"
+                                 Foreground="White"
+                                 CornerRadius="8"
+                                 HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="24"
+                                         FontWeight="Bold"
+                                         HorizontalAlignment="Center"
+                                         Text="Consultation">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="18"
+                                         FontWeight="Normal"
+                                         HorizontalAlignment="Left"
+                                         Text="Rulers must seek consultation (shūrā) from their subjects.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+                            <Expander 
+                                 Margin="25,0,25,25"
+                                 Background="#1A00FFAA"
+                                 Foreground="White"
+                                 CornerRadius="8"
+                                 HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="24"
+                                         FontWeight="Bold"
+                                         HorizontalAlignment="Center"
+                                         Text="Justice">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                         FontFamily="Rubik"
+                                         TextWrapping="Wrap"
+                                         FontSize="18"
+                                         FontWeight="Normal"
+                                         HorizontalAlignment="Left"
+                                         Text="The importance of rebuking unjust rulers and promoting social justice.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+                            <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="30"
+                                FontWeight="Bold"
+                                Margin="0,25,0,0"
+                                HorizontalAlignment="Center"
+                                Text="Modern Developments:">
+
+                            </TextBlock>
+
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="22"
+                                FontWeight="Normal"
+                                Margin="0,25,0,25"
+                                TextAlignment="Center"
+                                Text="In recent times, Political Islam has evolved in response to various global events, such as the defeat of Arab armies in the Six-Day War, the Iranian Revolution, and the collapse of the Soviet Union. This has led to the rise of various Islamic movements, including Islamism, Islamic democracy, and Islamic fundamentalism .">
+                            </TextBlock>
+
+                            <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <Grid
+                                Margin="50">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="560"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock 
+                                    Grid.Row="0"
+                                    FontFamily="Rubik"
+                                    TextWrapping="Wrap"
+                                    FontSize="60"
+                                    FontStyle="Italic"
+                                    FontWeight="ExtraBlack"
+                                    TextAlignment="Center"
+                                    Text="Watch Dr. Zakir Naik Uniting the Muslims in Politics !">
+
+                                </TextBlock>
+
+                                <Border
+                                    Grid.Row="1"
+                                    CornerRadius="25"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2">
+
+                                    <WebView2
+                                        x:Name="MyWebView4"
+                                        Source="https://www.youtube.com/embed/Xcsz33FsIdg?si=wjxiAW9EQvY1vTzK"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalAlignment="Stretch">
+
+                                    </WebView2>
+                                </Border>
+
+                            </Grid>
+
+
+                        </StackPanel>
+
+                    </ListView>
+
+                </Border>
+
+                <Border
+                    x:Name="AbdulBariPage"
+                    Visibility="Collapsed"
+                    Margin="23"
+                    CornerRadius="25">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="125"/>
+                        </Grid.RowDefinitions>
+
+                        <ScrollViewer 
+                            x:Name="ChatMessagesScrollViewer"
+                            VerticalScrollBarVisibility="Auto"
+                            HorizontalScrollBarVisibility="Disabled"
+                            Grid.Row="0">
+
+                            <StackPanel x:Name="ChatMessagesPanel" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock
+                                    x:Name="ChatbotResponseText" 
+                                    Text="Assalam u alaikum! Mai Abdul Bari Hoon, Acha Bacha Hoon!&#x0a;                       Aap Mujhse Kuch Bhi Pooch Sakte Hain!"
+                                    IsTextSelectionEnabled="True"
+                                    TextWrapping="Wrap"
+                                    FontSize="25"
+                                    FontFamily="Rubik"
+                                    FontWeight="Bold"
+                                    Margin="25">
+
+                                </TextBlock>
+                            </StackPanel>
+                        </ScrollViewer>
+
+                        <Border Grid.Row="1" VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                        <Grid Grid.Row="1" Margin="25,25" VerticalAlignment="Bottom">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- User Input Box -->
+                            <TextBox 
+                            x:Name="UserInputTextBox" 
+                            Grid.Column="0" 
+                            PlaceholderText="Type your message here..."
+                            VerticalAlignment="Center"
+                            Height="40"/>
+
+                            <!-- Send Button -->
+                            <AppBarButton
+                                Grid.Column="1" 
+                                Height="50" 
+                                Width="50"
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Right"
+                                Icon="Send"
+                                Click="SendButton_Click">
+
+                            </AppBarButton>
+                        </Grid>
+
+                    </Grid>
+
+                </Border>
+
+                <Border
+                    x:Name="ShariaLawPage"
+                    Visibility="Collapsed"
+                    Margin="23"
+                    CornerRadius="25">
+                    <ListView 
+                        Background="Transparent" 
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                        SelectionMode="None">
+
+                        <StackPanel>
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="48"
+                                FontWeight="ExtraBlack"
+                                Margin="0,50,0,0"
+                                HorizontalAlignment="Center"
+                                Text="Introduction to Sharia law">
+
+                            </TextBlock>
+                            <Border Width="700" VerticalAlignment="Top" BorderThickness="0,5,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <TextBlock 
+                                FontFamily="Rubik"
+                                TextWrapping="Wrap"
+                                FontSize="22"
+                                FontWeight="Normal"
+                                Margin="0,50,0,25"
+                                HorizontalAlignment="Left"
+                                Text="Sharia law is a religious law that lays down governing principles for spiritual, mental, and physical behavior. That must be followed by Muslims. It categorizes all man's acts into five distinct categories: obligatory, Recommended, permitted, discouraged, and forbidden.">
+
+                            </TextBlock>
+
+
+                            <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <Expander 
+                                Margin="25,25,25,0"
+                                Background="#1A00FFAA"
+                                Foreground="White"
+                                CornerRadius="8"
+                                HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        Text="What are the Islamic obligations?">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="18"
+                                        FontWeight="Normal"
+                                        HorizontalAlignment="Left"
+                                        Text="There are five key practices that all Muslims are obligated to fulfil throughout their lifetime. These practices are referred to as pillars because they form the foundation of Muslim life. The five pillars of Islam are Shahada, Salah, Zakat, Sawm, and Hajj.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+
+                            <Expander 
+                                    Margin="25,0,25,0"
+                                    Background="#1A00FFAA"
+                                    Foreground="White"
+                                    CornerRadius="8"
+                                    HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        Text="What word means permitted in Islam?">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="18"
+                                        FontWeight="Normal"
+                                        HorizontalAlignment="Left"
+                                        Text="Halal (also spelled halaal) is an Arabic word that means “lawful or permitted.” It is a term that is used in the Islamic religion in contrast with the word haram (which means “unlawful or not allowed”). These terms indicate which life practices are allowed or not allowed for those who practice Islam (Muslims).">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+
+                            <Expander 
+                                Margin="25,0,25,25"
+                                Background="#1A00FFAA"
+                                Foreground="White"
+                                CornerRadius="8"
+                                HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="24"
+                                        FontWeight="Bold"
+                                        HorizontalAlignment="Center"
+                                        Text="What is the meaning of forbidden(Haram)?">
+
+                                    </TextBlock>
+                                </Expander.Header>
+
+                                <Expander.Content>
+                                    <TextBlock 
+                                        FontFamily="Rubik"
+                                        TextWrapping="Wrap"
+                                        FontSize="18"
+                                        FontWeight="Normal"
+                                        HorizontalAlignment="Left"
+                                        Text="An Arabic term meaning forbidden or unlawful. In the case of Islamic finance, Muslims cannot invest in, acquire, or otherwise engage in transactions that involve forbidden products and activities such as pork-related products, alcohol, gambling. Forbidden actions in Islam:Actions, such as cursing, fornication, murder, and disrespecting one's parents. Policies, such as riba (usury, interest) Certain food and drinks, such as pork and alcohol. Some halal objects, foods, or actions that are normally halal (permissible) but under some conditions become haram.">
+                                    </TextBlock>
+                                </Expander.Content>
+                            </Expander>
+
+                            <Border VerticalAlignment="Top" BorderThickness="0,2,0,0" CornerRadius="3" BorderBrush="Gray"/>
+
+                            <Grid
+                                Margin="50">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="500"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock 
+                                    FontFamily="Rubik"
+                                    TextWrapping="Wrap"
+                                    FontSize="80"
+                                    FontStyle="Italic"
+                                    FontWeight="ExtraBlack"
+                                    HorizontalAlignment="Left"
+                                    Text="Watch What Dr.Israr Ahmed Says About Islamic Law!">
+
+                                </TextBlock>
+
+                                <Border
+                                    Grid.Column="1"
+                                    Width="560"
+                                    CornerRadius="25"
+                                    BorderBrush="Gray"
+                                    BorderThickness="2">
+
+                                    <WebView2
+                                        x:Name="MyWebView1"
+                                        Source="https://www.youtube.com/embed/kebsAmkH5bU?si=iAWkJ-YytOOy76E7"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalAlignment="Stretch">
+
+                                    </WebView2>
+                                </Border>
+
+                            </Grid>
+
+
+                        </StackPanel>
+
+
+                    </ListView>
+
+                </Border>
+
+
+
+
+
+
+            </Grid>
+
+
+
+        </NavigationView>
+
+
+        <Grid
+            x:Name="ProgressBarMain">
+            <Rectangle 
+                    Width="Auto" 
+                    Height="Auto" 
+                    Fill="{ThemeResource AcrylicInAppFillColorBaseBrush}">
+            </Rectangle>
+
+            <StackPanel
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+                <Image 
+                    Source="Images/Bismillah.png"
+                    Width="500"
+                    Margin="20">
+
+                </Image>
+                <ProgressBar 
+                    x:Name="ProgressBarLoad"
+                    Width="500"
+                    Value="0"
+                    IsIndeterminate="False">
+
+                </ProgressBar>
+
+            </StackPanel>
+
+        </Grid>
+
+
+
+    </Grid>
+</Window>
